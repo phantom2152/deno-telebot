@@ -9,7 +9,9 @@ const TOKEN = Deno.env.get("BOT_TOKEN");
 
 if (TOKEN == undefined) {
   console.error("BOT_TOKEN is not set in environment variables.");
-  Deno.exit(1);
+  throw new Error(
+    "BOT_TOKEN is required but not found in environment variables"
+  );
 }
 
 // Create an instance of the `Bot` class and pass your bot token to it.
