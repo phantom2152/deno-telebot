@@ -16,6 +16,8 @@ bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
 
 bot.hears(/\/echo (.+)/, (ctx) => ctx.reply(ctx.match[1]));
 
+bot.hears("ping", (ctx) => ctx.reply("Pong!!!"));
+
 bot.on("message", (ctx) => ctx.reply("Got another message!"));
 
 export default bot;
