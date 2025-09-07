@@ -68,7 +68,7 @@ function createProgressBar(percent: number): string {
 }
 
 bot.command("start", (ctx) =>
-  ctx.reply("👋 Welcome! Use /send <url> to fetch and send a file. ")
+  ctx.reply("👋 Welcome! Use /send <url> to fetch and send a file.")
 );
 
 bot.command("send", async (ctx) => {
