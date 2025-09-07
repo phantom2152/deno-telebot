@@ -67,11 +67,9 @@ function createProgressBar(percent: number): string {
   return "█".repeat(filledDots) + "░".repeat(emptyDots);
 }
 
-
 bot.command("start", (ctx) =>
-  ctx.reply("👋 Welcome! Use /send <url> to fetch and send a file.")
+  ctx.reply("👋 Welcome! Use /send <url> to fetch and send a file. ")
 );
-
 
 bot.command("send", async (ctx) => {
   const url = ctx.match?.trim();
@@ -85,7 +83,6 @@ bot.command("send", async (ctx) => {
   let lastProgressText = "";
 
   try {
-
     const headRes = await fetch(url, { method: "HEAD" });
     if (!headRes.ok) {
       return ctx.reply(
