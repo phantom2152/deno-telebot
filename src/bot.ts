@@ -183,7 +183,7 @@ bot.command("send", async (ctx) => {
     }
 
     const completeBar = createProgressBar(100);
-    const downloadCompleteText = `✅ Download complete!\n${completeBar} 100%\n\n📤 Uploading file...`;
+    const downloadCompleteText = `✅ Download complete!\n${completeBar} 100%\n\n📤 Uploading file....`;
 
     if (downloadCompleteText !== lastProgressText && progressMsg) {
       try {
